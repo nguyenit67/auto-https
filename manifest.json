@@ -2,6 +2,10 @@
   "name": "Not Laban Dictionary",
   "version": "0.1",
   "description": "Embed L*b** Dictionary for ease of use",
+  "background": {
+    "scripts": ["index.js"],
+    "persistent": false
+  },
   "page_action": {
     "default_popup": "index.html"
   },
