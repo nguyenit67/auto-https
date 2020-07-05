@@ -7,7 +7,7 @@ const HEIGHT = 400;
     w: WIDTH, 
     h: HEIGHT, 
     hl: 1, 
-    th: 2 
+    th: 2
   };
   function loadScript(t, e) {
     var n = document.createElement("script");
