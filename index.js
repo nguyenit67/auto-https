@@ -1,3 +1,4 @@
+// background.js
 chrome.runtime.onInstalled.addListener(function() {
   console.log("Installed! :>");
   chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {
