@@ -6,14 +6,14 @@
 }
 
 body {
-  min-width: 200px;
+  min-width: 260px;
   height: 50px;
 }
 
 #loading {
   position: fixed;
   top: 0;
-  left: 0;
+  left: 50%;
   font-size: 40px;
   z-index: -1;
 }
