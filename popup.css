@@ -3,20 +3,17 @@
   padding: 0;
   border: none;
   outline: none;
-
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 99;
 }
 
-.container {
-  position: relative;
-  top: 0;
-  left: 0;
+body {
+  width: 200px;
+  height: 100px;
 }
 
 #loading {
+  position: fixed;
+  top: 0;
+  left: 0;
   font-size: 40px;
   z-index: -1;
 }
