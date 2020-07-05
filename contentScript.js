@@ -1,4 +1,4 @@
-chrome.tabs.executeScript({ code: `
+// chrome.tabs.executeScript({ code: `
 var lbplugin_event_opt = {
   extension_enable: true,
   dict_type: 1,
@@ -30,4 +30,4 @@ setTimeout(function() {
       }
     );
 }, 1e3);
-`});
+// `});
