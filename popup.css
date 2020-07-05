@@ -5,6 +5,11 @@
   outline: none;
 }
 
+body {
+  width: initial;
+  height: initial;
+}
+
 #loading {
   position: fixed;
   top: 0;
