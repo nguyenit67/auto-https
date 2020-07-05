@@ -29,7 +29,9 @@ setTimeout(function() {
           try {
             lbDictPlugin.init(lbplugin_event_opt);
             clearInterval(tryTillDie);
-          } catch {}
+          } catch {
+            console.log("Oh no :<");
+          }
         }, 1e3);
       }
     );
