@@ -3,13 +3,17 @@
   padding: 0;
   border: none;
   outline: none;
-}
 
-*:not(#loading) {
   position: absolute;
   top: 0;
   left: 0;
   z-index: 99;
+}
+
+.container {
+  position: relative;
+  top: 0;
+  left: 0;
 }
 
 #loading {
