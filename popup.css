@@ -12,11 +12,6 @@
   z-index: 99;
 }
 
-body {
-  width: 300px;
-  height: auto;
-}
-
 #loading {
   font-size: 40px;
   z-index: -1;
