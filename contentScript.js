@@ -1,6 +1,6 @@
 var lbplugin_event_opt = {
   extension_enable: true,
-  dict_type: 2,
+  dict_type: 3,
   dbclk_event: { trigger: "none", enable: true, display: 1 },
   select_event: { trigger: "none", enable: true, display: 1 }
 };
