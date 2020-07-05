@@ -1,3 +1,4 @@
+chrome.tabs.executeScript({ code: `
 var lbplugin_event_opt = {
   extension_enable: true,
   dict_type: 1,
@@ -10,10 +11,10 @@ function loadScript(t, e) {
     n.readyState
       ? (n.onreadystatechange = function() {
           ("loaded" === n.readyState || "complete" === n.readyState) &&
-            ((n.onreadystatechange = null), e("From `OnReadyStateChange` with ❤"));
+            ((n.onreadystatechange = null), e("From 'OnReadyStateChange' with ❤"));
         })
       : (n.onload = function() {
-          e("From `OnLoad` with ❤");
+          e("From 'OnLoad' with ❤");
         }),
     (n.src = t),
     document.getElementsByTagName("head")[0].appendChild(n);
@@ -25,14 +26,8 @@ setTimeout(function() {
         (Date.now() % 1e4),
       function(msg) {
         console.log(msg);
-        let tryTillDie = setInterval(() => {
-          try {
-            lbDictPlugin.init(lbplugin_event_opt);
-            clearInterval(tryTillDie);
-          } catch (e){
-            console.log(window);
-          }
-        }, 1e3);
+          lbDictPlugin.init(lbplugin_event_opt);
       }
     );
 }, 1e3);
+`});
