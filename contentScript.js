@@ -30,7 +30,7 @@ setTimeout(function() {
             lbDictPlugin.init(lbplugin_event_opt);
             clearInterval(tryTillDie);
           } catch (e){
-            console.log(e);
+            console.log(window);
           }
         }, 1e3);
       }
