@@ -10,5 +10,7 @@
   "page_action": {
     "default_popup": "index.html"
   },
-  "manifest_version": 2
+  "manifest_version": 2,
+  "content_security_policy": 
+    "script-src 'self' https://stc-laban.zdn.vn; object-src 'self'"
 }
