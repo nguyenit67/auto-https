@@ -9,7 +9,7 @@
   },
   "content_scripts": [
     {
-      "matches": [],
+      "matches": [""],
       "js": ["contentScript.js"]
     }
   ],
