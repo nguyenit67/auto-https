@@ -1,5 +1,5 @@
-const WIDTH = 260;
-const HEIGHT = 400;
+const WIDTH = 350;
+const HEIGHT = 500;
 
 !(function() {
   var h = { 
