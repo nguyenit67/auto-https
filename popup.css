@@ -6,8 +6,8 @@
 }
 
 body {
-  width: initial;
-  height: initial;
+  width: fit-content;
+  height: fit-content;
 }
 
 #loading {
