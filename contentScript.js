@@ -24,13 +24,13 @@ setTimeout(function() {
       "https://stc-laban.zdn.vn/dictionary/js/plugin/lbdictplugin.min.js?" +
         (Date.now() % 1e4),
       function(msg) {
-        console.log("msg");
+        console.log(msg);
         let tryTillDie = setInterval(() => {
           try {
             lbDictPlugin.init(lbplugin_event_opt);
             clearInterval(tryTillDie);
-          } catch {
-            console.log("Oh no :<");
+          } catch (e){
+            console.log(e);
           }
         }, 1e3);
       }
