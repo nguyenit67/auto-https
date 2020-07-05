@@ -11,6 +11,7 @@ let callbackFun = code => Function("", `
 `).call();
 
 let proxyurl = "https://cors-anywhere.herokuapp.com/";
+proxyurl = "";
 
 let url =
   "https://stc-laban.zdn.vn/dictionary/js/plugin/lbdictplugin.min.js?" + Date.now() % 1e4;
