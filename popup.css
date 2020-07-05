@@ -9,3 +9,11 @@ body {
   width: 300px;
   height: 200px;
 }
+
+#loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-size: 50px;
+  z-index: -1;
+}
