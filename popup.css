@@ -5,15 +5,19 @@
   outline: none;
 }
 
+*:not(#loading) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
 body {
   width: 300px;
   height: auto;
 }
 
-#loading {  
-  position: absolute;
-  top: 0;
-  left: 0;
+#loading {
   font-size: 40px;
   z-index: -1;
 }
