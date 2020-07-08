@@ -20,3 +20,4 @@ fetch(proxyurl + url)
   .then(response => response.text())
   .then(callbackFun)
   .catch(error => console.log(error));
+
