@@ -19,7 +19,7 @@
       ],
       "run_at": "document_idle",
       "js": [
-        "contentscript.js"
+        "content_scripts.js"
       ]
     }
   ],
