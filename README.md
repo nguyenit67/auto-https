@@ -1,5 +1,4 @@
-# laban-dictionary-chromium-extension-revive-lemon-flavor
+# HTTPS AUTO REDIRECT
 
-###### Laban Dictionary Revived Extension for ease of use
+just redirect http://example.com to       https://example.com :>
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/laban-dictionary-chromium-extension-revive-lemon-flavor)
