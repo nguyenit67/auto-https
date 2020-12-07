@@ -1,7 +1,7 @@
 {
-  "name": "Not Laban Dictionary",
-  "version": "0.1",
-  "description": "Embed L*b** Dictionary for ease of use",
+  "name": "Not YT+ or auto HTTPS",
+  "version": "0.1.1",
+  "description": "YTplus + Auto redirect from http:// to https://",
   "permissions": [
     "declarativeContent",
     "activeTab"
@@ -15,29 +15,23 @@
   "content_scripts": [
     {
       "matches": [
-        "<all_urls>"
+        "http://*/*",
+        "https://truyentranhaudio.online/*"
       ],
       "run_at": "document_idle",
       "js": [
-        "content_scripts.js"
+        "./js/content_scripts.js"
+      ]
+    },
+    {
+      "matches": [
+        "https://www.youtube.com/*"
+      ],
+      "run_at": "document_idle",
+      "js": [
+        "./js/exten_youtube.js"
       ]
     }
   ],
-  "browser_action": {
-    "default_popup": "popup.html",
-    "default_icon": {
-      "16": "images/nld_icon16.png",
-      "32": "images/nld_icon32.png",
-      "48": "images/nld_icon48.png",
-      "128": "images/nld_icon128.png"
-    }
-  },
-  "icons": {
-    "16": "images/nld_icon16.png",
-    "32": "images/nld_icon32.png",
-    "48": "images/nld_icon48.png",
-    "128": "images/nld_icon128.png"
-  },
-  "manifest_version": 2,
-  "content_security_policy": "img-src 'self' data:image/svg+xml; script-src 'self' 'unsafe-inline' *; style-src  'self' 'unsafe-inline' *"
+  "manifest_version": 2
 }
