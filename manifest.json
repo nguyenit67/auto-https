@@ -2,35 +2,21 @@
   "name": "Not YT+ or auto HTTPS",
   "version": "0.1.1",
   "description": "YTplus + Auto redirect from http:// to https://",
-  "permissions": [
-    "declarativeContent",
-    "activeTab"
-  ],
+  "permissions": ["declarativeContent", "activeTab"],
   "background": {
-    "scripts": [
-      "background.js"
-    ],
+    "scripts": ["script/background.js"],
     "persistent": false
   },
   "content_scripts": [
     {
-      "matches": [
-        "http://*/*",
-        "https://truyentranhaudio.online/*"
-      ],
+      "matches": ["http://*/*", "https://truyentranhaudio.online/*"],
       "run_at": "document_idle",
-      "js": [
-        "./js/content_scripts.js"
-      ]
+      "js": ["./script/content_scripts.js"]
     },
     {
-      "matches": [
-        "https://www.youtube.com/*"
-      ],
+      "matches": ["https://www.youtube.com/*"],
       "run_at": "document_idle",
-      "js": [
-        "./js/exten_youtube.js"
-      ]
+      "js": ["./script/exten_youtube.js"]
     }
   ],
   "manifest_version": 2

@@ -5,9 +5,9 @@ chrome.runtime.onInstalled.addListener(function () {
 
 chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
   if (changeInfo.status && changeInfo.status === "complete") {
-    // chrome.tabs.executeScript({
-    //   file: "js/ytplus.js"
-    // });
+    chrome.tabs.executeScript({
+      file: "script/exten_youtube.js"
+    });
 
     chrome.tabs.insertCSS(tabId, {
       code: `
