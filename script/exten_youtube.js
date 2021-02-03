@@ -1,53 +1,69 @@
-document.addEventListener("load", function() {
-  const topBar = document.querySelector(".ytp-chrome-top");
-  const bottomBar = document.querySelector(".ytp-chrome-bottom");
+// document.addEventListener("load", function() {
 
-  const SWITCH_NAME = "lemmeathtem-fu89ufh8ufvj--display-none";
+const SWITCH_NAME = "lemmeathtem-fu89ufh8ufvj--display-none";
 
-  const BUTTON_CLASSNAME = "betbet";
-
-  const style = document.createElement("style");
-  style.innerHTML = `
+const style = document.createElement("style");
+style.innerHTML = `
     .${SWITCH_NAME} {
       display: none;
     }
+    `;
 
-    .${BUTTON_CLASSNAME} {
-      position: fixed;
-      top: 50%;
-      right: 0;
-      z-index: 9999;
-    }
-  `;
+document.head.appendChild(style);
 
-  document.head.appendChild(style);
+// Event for toggle visible header
+window.addEventListener("keydown", (event) => {
+  console.log(event.key);
+  if (event.key === "h") {
+  }
+  switch (event.key) {
+    case "h":
+      toggleVisible();
+      break;
 
-  const trigBtn = elemt(
-    "button",
-    {
-      class: BUTTON_CLASSNAME,
-    },
-    "X"
+    case "q":
+      openSettings();
+      break;
+
+    case "s":
+      openSettings();
+      break;
+  }
+});
+
+// ----------------- FUNCTIONS --------------
+function toggleVisible() {
+  const topBar = document.querySelector(".ytp-chrome-top");
+  const bottomBar = document.querySelector(".ytp-chrome-bottom");
+  topBar.classList.toggle(SWITCH_NAME);
+  bottomBar.classList.toggle(SWITCH_NAME);
+}
+
+function openSettings() {
+  const settingsBtn = document.querySelector(
+    "#movie_player .ytp-settings-button"
   );
+  settingsBtn.click();
+}
 
-  document.querySelector("#player-theater-container").appendChild(trigBtn);
+function openQuality() {
+  const qualityBtn = document.querySelectorAll(
+    "#ytp-id-17 > div > div > div:nth-child(4)"
+  );
+}
 
-  trigBtn.onclick = toggleVisible;
+function getCSSselector(elemt) {
+  while (elemt.parent) {}
+}
 
-  // ----------------- FUNCTIONS --------------
-  function toggleVisible() {
-    topBar.classList.toggle(SWITCH_NAME);
-    bottomBar.classList.toggle(SWITCH_NAME);
+function elemt(name = "input", attrMap, ...children) {
+  let dom = document.createElement(name);
+  for (let attr in attrMap) {
+    dom.setAttribute(attr, attrMap[attr]);
   }
+  dom.append(...children);
+  return dom;
+}
 
-  function elemt(name = "input", attrMap, ...children) {
-    let dom = document.createElement(name);
-    for (let attr in attrMap) {
-      dom.setAttribute(attr, attrMap[attr]);
-    }
-    dom.append(...children);
-    return dom;
-  }
-
-  console.log("YT done with me 👌");
-})
+console.log("YT done with me 👌");
+// })

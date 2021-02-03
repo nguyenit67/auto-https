@@ -1,4 +1,5 @@
 {
+  "manifest_version": 2,
   "name": "Not YT+ or auto HTTPS",
   "version": "0.1.1",
   "description": "YTplus + Auto redirect from http:// to https://",
@@ -19,5 +20,12 @@
       "js": ["./script/exten_youtube.js"]
     }
   ],
-  "manifest_version": 2
+  "commands": {
+    "toggle-player-bars": {
+      "suggested_key": {
+        "default": "Alt+H"
+      },
+      "description": "Toggle player's top bar and bottom bar"
+    }
+  }
 }

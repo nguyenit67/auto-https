@@ -19,3 +19,15 @@ chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
     
   }
 });
+
+chrome.commands.onCommand.addListener((command, tab) => {
+  console.log('Command:', command);
+
+  if (command === "toggle-player-bars") {
+    console.log("Triggerd ⚠!!!");
+    
+    
+  }
+
+});
+
