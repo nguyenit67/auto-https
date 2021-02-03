@@ -3,10 +3,14 @@
   "name": "Not YT+ or auto HTTPS",
   "version": "0.1.1",
   "description": "YTplus + Auto redirect from http:// to https://",
-  "permissions": ["declarativeContent", "activeTab"],
+  "permissions": ["declarativeContent", "activeTab", "tabs"],
   "background": {
     "scripts": ["script/background.js"],
     "persistent": false
+  },
+  "icons": {
+    "512": "images/Communist_5-512.png"
+    // "16": "images/mangekyo-ubuntu_logo16px.png"
   },
   "content_scripts": [
     {

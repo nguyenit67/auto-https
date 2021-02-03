@@ -1,3 +1,4 @@
+// @ts-nocheck
 // document.addEventListener("load", function() {
 
 const SWITCH_NAME = "lemmeathtem-fu89ufh8ufvj--display-none";
@@ -13,25 +14,65 @@ document.head.appendChild(style);
 
 // Event for toggle visible header
 window.addEventListener("keydown", (event) => {
+  //
   console.log(event.key);
-  if (event.key === "h") {
-  }
+
   switch (event.key) {
     case "h":
       toggleVisible();
       break;
 
-    case "q":
+    case "s":
       openSettings();
       break;
 
-    case "s":
-      openSettings();
+    case "q":
+      openQuality();
+      break;
+
+    case "e":
+      focusOnHighestHDOption();
       break;
   }
 });
 
 // ----------------- FUNCTIONS --------------
+
+function xpathSelectAll(xpath, ctxNode = document) {
+  const jpgLinks = document.evaluate(
+    xpath,
+    ctxNode,
+    null,
+    XPathResult.ORDERED_NODE_SNAPSHOT_TYPE,
+    null
+  );
+
+  const numLinks = jpgLinks.snapshotLength;
+  const xnodeList = [];
+
+  for (let J = 0; J < numLinks; ++J) {
+    const thisLink = jpgLinks.snapshotItem(J);
+    xnodeList.push(thisLink);
+  }
+
+  return xnodeList;
+}
+
+function focusOnHighestHDOption() {
+  const$qualityTitle = document.querySelector("div.ytp-panel-header");
+  const$qualityTitle.click();
+
+  const event = new MouseEvent("click", {
+    view: window,
+    bubbles: true,
+    cancelable: true,
+  });
+
+  const cancelled = !const$qualityTitle.dispatchEvent(event);
+
+  console.log(const$qualityTitle.innerHTML);
+}
+
 function toggleVisible() {
   const topBar = document.querySelector(".ytp-chrome-top");
   const bottomBar = document.querySelector(".ytp-chrome-bottom");
@@ -40,16 +81,19 @@ function toggleVisible() {
 }
 
 function openSettings() {
-  const settingsBtn = document.querySelector(
+  const$settingsBtn = document.querySelector(
     "#movie_player .ytp-settings-button"
   );
-  settingsBtn.click();
+  const$settingsBtn.click();
 }
 
 function openQuality() {
-  const qualityBtn = document.querySelectorAll(
-    "#ytp-id-17 > div > div > div:nth-child(4)"
-  );
+  const$qualityBtnXpath =
+    "//div[@class='ytp-menuitem-label'][contains(text(),'Quality')]";
+
+  qualityBtn = xpathSelectAll(const$qualityBtnXpath)[0];
+
+  qualityBtn.click();
 }
 
 function getCSSselector(elemt) {
