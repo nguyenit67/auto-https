@@ -16,6 +16,11 @@ document.head.appendChild(style);
 window.addEventListener("keydown", (event) => {
   //
   console.log(event.key);
+  const ytPlayer = document.querySelector("#ytd-player");
+
+  if (!ytPlayer.contains(document.activeElement)) {
+    return;
+  }
 
   switch (event.key) {
     case "h":
